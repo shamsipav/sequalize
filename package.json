@@ -14,5 +14,5 @@
         "sequelize": "^6.21.3",
         "sqlite3": "^5.0.11"
     },
-    "type": "commonjs"
+    "type": "module"
 }
