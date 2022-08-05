@@ -40,7 +40,7 @@ const Calendar = sequelize.define("Calendar", {
     },
 });
 
-// Станьте ценным специалистом современной компании...
+// (?) Станьте ценным специалистом современной компании...
 const Education = sequelize.define("Education", {
     title: {
         type: DataTypes.STRING,
@@ -56,7 +56,7 @@ const Education = sequelize.define("Education", {
     },
 });
 
-// Алгоритм поступления
+// (?) Алгоритм поступления
 const Algorithm = sequelize.define("Algorithm", {
     title: {
         type: DataTypes.STRING,
