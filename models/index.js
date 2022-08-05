@@ -2,12 +2,9 @@ import {DataTypes} from "sequelize";
 
 // 1 128 Бюджетных мест по программам..., 20 июня Начало приема документов...
 const Feature = sequelize.define("Feature", {
-    value: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
     title: {
         type: DataTypes.STRING,
+        allowNull: false,
     },
     description: {
         type: DataTypes.STRING,
@@ -17,7 +14,7 @@ const Feature = sequelize.define("Feature", {
 
 // Кто такой и чем занимается инженер-конструктор?
 const Specialist = sequelize.define("Specialist", {
-    name: {
+    title: {
         type: DataTypes.STRING,
         allowNull: false,
     },
@@ -28,14 +25,47 @@ const Specialist = sequelize.define("Specialist", {
     minsalary: {
         type: DataTypes.DECIMAL(10, 2),
     },
+    functions: {
+        type: DataTypes.STRING,
+    },
 });
-Specialist.hasMany(SpecialistFunction);
 
-const SpecialistFunction = sequelize.define("SpecialistFunction", {
-    name: {
+// Отзывы выпускников
+const Feedback = sequelize.define("Feedback", {
+    graduate: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    avatar: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    label: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    text: {
         type: DataTypes.STRING,
         allowNull: false,
     },
 });
 
+// Партнеры института
+const Partners = sequelize.define("Partners", {
+    logo: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    }
+});
 
+// Часто задаваемые вопросы
+const Question = sequelize.define("Question", {
+    text: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    answer: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+});
