@@ -141,3 +141,61 @@ const Question = sequelize.define("Question", {
         allowNull: false,
     },
 });
+
+// Общежития
+const Dormitory = sequelize.define("Dormitory", {
+    image: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    address: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+});
+
+// (?) Ответственный за поселение
+const Responsible = sequelize.define("Responsible", {
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    label: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    auditory: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    phone: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    mail: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+});
+
+// Ответственные лица института
+const InstitutePerson = sequelize.define("InstitutePerson", {
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    label: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    phone: {
+        type: DataTypes.STRING,
+    },
+    email: {
+        type: DataTypes.STRING,
+    },
+});
