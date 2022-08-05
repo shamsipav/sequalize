@@ -12,6 +12,66 @@ const Feature = sequelize.define("Feature", {
     },
 });
 
+// Календарь приёма
+const Calendar = sequelize.define("Calendar", {
+    educationForm: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    acceptDates: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    examDates: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    endDate: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    ordersDate: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    educationBasis: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+});
+
+// Станьте ценным специалистом современной компании...
+const Education = sequelize.define("Education", {
+    title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    description: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    features: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+});
+
+// Алгоритм поступления
+const Algorithm = sequelize.define("Algorithm", {
+    title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    documentsWays: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    documentsPacket: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+});
+
 // Кто такой и чем занимается инженер-конструктор?
 const Specialist = sequelize.define("Specialist", {
     title: {
@@ -22,11 +82,23 @@ const Specialist = sequelize.define("Specialist", {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    minsalary: {
+    minSalary: {
         type: DataTypes.DECIMAL(10, 2),
     },
     functions: {
         type: DataTypes.STRING,
+    },
+});
+
+// Студенческие возможности | Не знаю, нужно ли добавлять свойство для иконки
+const Possibility = sequelize.define("Possibility", {
+    title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    description: {
+        type: DataTypes.STRING,
+        allowNull: false,
     },
 });
 
@@ -55,7 +127,7 @@ const Partners = sequelize.define("Partners", {
     logo: {
         type: DataTypes.STRING,
         allowNull: false,
-    }
+    },
 });
 
 // Часто задаваемые вопросы
